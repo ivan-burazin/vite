@@ -1,0 +1,17 @@
+{
+    "name": "Vite Vue Project",
+    "dockerFile": "../Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Vue.volar",
+                "Vue.vscode-typescript-vue-plugin",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode"
+            ]
+        }
+    },
+    "forwardPorts": [5173],
+    "postCreateCommand": "pnpm install",
+    "remoteUser": "node"
+}
