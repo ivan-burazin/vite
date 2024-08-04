@@ -6,14 +6,11 @@ RUN npm install -g pnpm
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and pnpm-lock.yaml
-COPY package.json pnpm-lock.yaml ./
+# Copy the entire project
+COPY . .
 
 # Install dependencies
 RUN pnpm install
-
-# Copy the rest of the code
-COPY . .
 
 # Expose the port Vite runs on
 EXPOSE 5173
